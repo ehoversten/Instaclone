@@ -1,0 +1,16 @@
+.container
+  .posts-wrapper
+    %p#notice= notice
+    %h1.text-center
+      %strong Title:
+      = @post.title
+    %p
+      = image_tag @post.image.url(:medium)
+    %p.text-center
+      %strong Caption:
+      = @post.caption
+
+  .button-wrapper
+    = link_to 'Edit', edit_post_path(@post), class: 'btn btn-outline-primary'
+    |
+    = link_to 'Back', posts_path, class: 'btn btn-primary'

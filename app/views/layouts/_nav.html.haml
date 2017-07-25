@@ -1,0 +1,41 @@
+-# %nav.navbar.navbar-default
+-#   .navbar-container
+-#     .navbar-header
+-#       %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+-#         %span.sr-only Toggle Navigation
+-#         %span.icon-bar
+-#         %span.icon-bar
+-#       .navbar-brand= link_to "Photogram", root_path
+-#
+-#     .collapse.navbar-collapse#bs-navbar-collapse-1
+-#       %ul.nav.navbar-nav.navbar-right
+-#         %li
+-#           = link_to "New Post", new_post_path, class: 'btn btn-primary'
+-#         %li
+-#           = link_to "Login", '#', class: 'btn btn-success'
+-#         %li
+-#           = link_to "Register", '#', class: 'btn btn-outline-success'
+
+%nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarTogglerDemo02", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarTogglerDemo02", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  %a.navbar-brand= link_to "Photogram", root_path
+  #navbarTogglerDemo02.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto.mt-2.mt-md-0
+    -#   %li.nav-item.active
+    -#     %a.nav-link{:href => "#"}
+    -#       Home
+    -#       %span.sr-only (current)
+    -#   %li.nav-item
+    -#     %a.nav-link{:href => "#"} Link
+    -#   %li.nav-item
+    -#     %a.nav-link.disabled{:href => "#"} Disabled
+    %form.form-inline.my-2.my-lg-0
+      = link_to "New Post", new_post_path, class: 'btn btn-primary'
+      |
+      = link_to "Login", '#', class: 'btn btn-success'
+      |
+      = link_to "Register", '#', class: 'btn btn-outline-success'
+
+      -# %input.form-control.mr-sm-2{:placeholder => "Search", :type => "text"}/
+      -# %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
