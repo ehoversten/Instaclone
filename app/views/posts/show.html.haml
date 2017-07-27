@@ -4,6 +4,7 @@
     %h1.text-center
       %strong Title:
       = @post.title
+    %h3= @post.user.user_name
     %p
       = image_tag @post.image.url(:medium)
     %p.text-center
